@@ -1,0 +1,9 @@
+resolver: lts-5.10
+flags: {}
+packages:
+- 'bin/api'
+
+- 'lib/resource-pool-0.2.3.2'
+- 'lib/Spock-0.10.0.1'
+
+extra-deps: []

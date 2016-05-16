@@ -1,0 +1,25 @@
+name:                 api
+version:              0.1.0.0
+synopsis:
+description:          Reproducible example for https://github.com/agrafix/Spock/issues/77
+homepage:
+license:              BSD3
+author:
+maintainer:
+copyright:            2016
+category:             Web
+build-type:           Simple
+cabal-version:        >=1.10
+
+executable api
+  hs-source-dirs:     src
+  main-is:            Main.hs
+  ghc-options:        -eventlog -threaded -rtsopts -with-rtsopts=-N
+  build-depends:      Spock
+                    , base
+                    , monad-control
+                    , resource-pool
+                    , transformers
+                    , postgresql-simple
+
+  default-language:   Haskell2010
