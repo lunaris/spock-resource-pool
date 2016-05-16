@@ -1,0 +1,977 @@
+
+==================== Tidy Core ====================
+2016-05-16 13:44:32.688345 UTC
+
+Result size of Tidy Core = {terms: 310, types: 557, coercions: 79}
+
+Company.Executables.Options.Internal.Operations.$wa [InlPrag=[0]]
+  :: forall a_a1zT.
+     Monoid a_a1zT =>
+     O.Parser a_a1zT
+     -> Bool
+     -> Options.Applicative.Help.Chunk.Chunk
+          ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc
+     -> Options.Applicative.Help.Chunk.Chunk
+          ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc
+     -> Options.Applicative.Help.Chunk.Chunk
+          ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc
+     -> Int
+     -> Bool
+     -> EnvParser a_a1zT
+     -> a_a1zT
+     -> ghc-prim-0.4.0.0:GHC.Prim.State#
+          ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+             ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+           a_a1zT #)
+[GblId,
+ Arity=11,
+ Str=DmdType <L,U(A,C(C1(U)),A)><L,U><L,U><L,U><L,U><L,U><L,U(U)><L,U><C(S),C1(U(U,U))><S,U><L,U>,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=IF_ARGS [60 0 0 0 0 0 0 0 0 0 0] 190 30}]
+Company.Executables.Options.Internal.Operations.$wa =
+  \ (@ a_a1zT)
+    (w_s5JL :: Monoid a_a1zT)
+    (ww_s5JT :: O.Parser a_a1zT)
+    (ww1_s5JU :: Bool)
+    (ww2_s5JV
+       :: Options.Applicative.Help.Chunk.Chunk
+            ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc)
+    (ww3_s5JW
+       :: Options.Applicative.Help.Chunk.Chunk
+            ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc)
+    (ww4_s5JX
+       :: Options.Applicative.Help.Chunk.Chunk
+            ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc)
+    (ww5_s5JY :: Int)
+    (ww6_s5JZ :: Bool)
+    (ww7_s5K1 :: EnvParser a_a1zT)
+    (ww8_s5K2 :: a_a1zT)
+    (w1_s5JN [OS=OneShot]
+       :: ghc-prim-0.4.0.0:GHC.Prim.State#
+            ghc-prim-0.4.0.0:GHC.Prim.RealWorld) ->
+    case (ww7_s5K1
+          `cast` (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <a_a1zT>_R
+                  :: IO a_a1zT
+                     ~R# (ghc-prim-0.4.0.0:GHC.Prim.State#
+                            ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+                          -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                                  ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                                a_a1zT #))))
+           w1_s5JN
+    of _ [Occ=Dead] { (# ipv_i39J, ipv1_i39K #) ->
+    case System.Environment.getArgs1 ipv_i39J
+    of _ [Occ=Dead] { (# ipv2_a39W, ipv3_a39X #) ->
+    case Options.Applicative.Extra.customExecParser2
+           @ a_a1zT
+           (O.execParserPure
+              @ a_a1zT
+              parserPrefs
+              (Options.Applicative.Types.ParserInfo
+                 @ a_a1zT
+                 ww_s5JT
+                 ww1_s5JU
+                 ww2_s5JV
+                 ww3_s5JW
+                 ww4_s5JX
+                 ww5_s5JY
+                 ww6_s5JZ)
+              ipv3_a39X)
+           ipv2_a39W
+    of _ [Occ=Dead] { (# ipv4_X3aB, ipv5_X3aD #) ->
+    (# ipv4_X3aB,
+       mappend
+         @ a_a1zT
+         w_s5JL
+         ww8_s5K2
+         (mappend @ a_a1zT w_s5JL ipv1_i39K ipv5_X3aD) #)
+    }
+    }
+    }
+
+Company.Executables.Options.Internal.Operations.execParser1 [InlPrag=INLINE[0]]
+  :: forall a_a1zT.
+     Monoid a_a1zT =>
+     ParserInfo a_a1zT
+     -> ghc-prim-0.4.0.0:GHC.Prim.State#
+          ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+             ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+           a_a1zT #)
+[GblId,
+ Arity=3,
+ Str=DmdType <L,U(A,C(C1(U)),A)><S(SC(S)S),1*U(U(U,U,U,U,U,U(U),U),C1(U(U,U)),U)><L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=3,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (@ a_a1zT)
+                 (w_s5JL [Occ=Once] :: Monoid a_a1zT)
+                 (w1_s5JM [Occ=Once!] :: ParserInfo a_a1zT)
+                 (w2_s5JN [Occ=Once, OS=OneShot]
+                    :: ghc-prim-0.4.0.0:GHC.Prim.State#
+                         ghc-prim-0.4.0.0:GHC.Prim.RealWorld) ->
+                 case w1_s5JM
+                 of _ [Occ=Dead]
+                 { ParserInfo ww1_s5JQ [Occ=Once!] ww2_s5K1 [Occ=Once]
+                              ww3_s5K2 [Occ=Once] ->
+                 case ww1_s5JQ
+                 of _ [Occ=Dead]
+                 { O.ParserInfo ww5_s5JT [Occ=Once] ww6_s5JU [Occ=Once]
+                                ww7_s5JV [Occ=Once] ww8_s5JW [Occ=Once] ww9_s5JX [Occ=Once]
+                                ww10_s5JY [Occ=Once] ww11_s5JZ [Occ=Once] ->
+                 Company.Executables.Options.Internal.Operations.$wa
+                   @ a_a1zT
+                   w_s5JL
+                   ww5_s5JT
+                   ww6_s5JU
+                   ww7_s5JV
+                   ww8_s5JW
+                   ww9_s5JX
+                   ww10_s5JY
+                   ww11_s5JZ
+                   ww2_s5K1
+                   ww3_s5K2
+                   w2_s5JN
+                 }
+                 }}]
+Company.Executables.Options.Internal.Operations.execParser1 =
+  \ (@ a_a1zT)
+    (w_s5JL :: Monoid a_a1zT)
+    (w1_s5JM :: ParserInfo a_a1zT)
+    (w2_s5JN [OS=OneShot]
+       :: ghc-prim-0.4.0.0:GHC.Prim.State#
+            ghc-prim-0.4.0.0:GHC.Prim.RealWorld) ->
+    case w1_s5JM
+    of _ [Occ=Dead] { ParserInfo ww1_s5JQ ww2_s5K1 ww3_s5K2 ->
+    case ww1_s5JQ
+    of _ [Occ=Dead]
+    { O.ParserInfo ww5_s5My ww6_s5Mz ww7_s5MA ww8_s5MB ww9_s5MC
+                   ww10_s5MD ww11_s5ME ->
+    Company.Executables.Options.Internal.Operations.$wa
+      @ a_a1zT
+      w_s5JL
+      ww5_s5My
+      ww6_s5Mz
+      ww7_s5MA
+      ww8_s5MB
+      ww9_s5MC
+      ww10_s5MD
+      ww11_s5ME
+      ww2_s5K1
+      ww3_s5K2
+      w2_s5JN
+    }
+    }
+
+execParser
+  :: forall a_a1pC. Monoid a_a1pC => ParserInfo a_a1pC -> IO a_a1pC
+[GblId,
+ Arity=3,
+ Str=DmdType <L,U(A,C(C1(U)),A)><S(SC(S)S),1*U(U(U,U,U,U,U,U(U),U),C1(U(U,U)),U)><L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= Company.Executables.Options.Internal.Operations.execParser1
+               `cast` (forall a_a1zT.
+                       <Monoid a_a1zT>_R
+                       -> <ParserInfo a_a1zT>_R
+                       -> Sym (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <a_a1zT>_R)
+                       :: (forall a_a1zT.
+                           Monoid a_a1zT =>
+                           ParserInfo a_a1zT
+                           -> ghc-prim-0.4.0.0:GHC.Prim.State#
+                                ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+                           -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                                   ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                                 a_a1zT #))
+                          ~R# (forall a_a1zT.
+                               Monoid a_a1zT =>
+                               ParserInfo a_a1zT -> IO a_a1zT))}]
+execParser =
+  Company.Executables.Options.Internal.Operations.execParser1
+  `cast` (forall a_a1zT.
+          <Monoid a_a1zT>_R
+          -> <ParserInfo a_a1zT>_R
+          -> Sym (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <a_a1zT>_R)
+          :: (forall a_a1zT.
+              Monoid a_a1zT =>
+              ParserInfo a_a1zT
+              -> ghc-prim-0.4.0.0:GHC.Prim.State#
+                   ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+              -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                      ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                    a_a1zT #))
+             ~R# (forall a_a1zT.
+                  Monoid a_a1zT =>
+                  ParserInfo a_a1zT -> IO a_a1zT))
+
+flag
+  :: forall a_a1pw.
+     a_a1pw -> a_a1pw -> ArgsMod FlagFields a_a1pw -> ArgsParser a_a1pw
+[GblId,
+ Arity=3,
+ Caf=NoCafRefs,
+ Str=DmdType <L,U><L,U><L,1*U(1*C1(U(U,1*U)),1*U(U,1*U),1*C1(U(U,U,U,A)))>m4,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= O.flag}]
+flag = O.flag
+
+fullDesc :: forall a_a1py. ArgsInfoMod a_a1py
+[GblId,
+ Arity=1,
+ Caf=NoCafRefs,
+ Str=DmdType <S,1*U(U,A,U,U,U,U,U)>m,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= Options.Applicative.Builder.fullDesc1
+               `cast` (forall a2_i2JB.
+                       Sym (Options.Applicative.Builder.NTCo:InfoMod[0] <a2_i2JB>_N)
+                       :: (forall a2_i2JB. O.ParserInfo a2_i2JB -> O.ParserInfo a2_i2JB)
+                          ~R# (forall a2_i2JB. O.InfoMod a2_i2JB))}]
+fullDesc =
+  Options.Applicative.Builder.fullDesc1
+  `cast` (forall a2_i2JB.
+          Sym (Options.Applicative.Builder.NTCo:InfoMod[0] <a2_i2JB>_N)
+          :: (forall a2_i2JB. O.ParserInfo a2_i2JB -> O.ParserInfo a2_i2JB)
+             ~R# (forall a2_i2JB. O.InfoMod a2_i2JB))
+
+help
+  :: forall (f_a1pu :: * -> *) a_a1pv.
+     String -> ArgsMod f_a1pu a_a1pv
+[GblId,
+ Arity=1,
+ Str=DmdType <L,1*U>m,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= O.help}]
+help = O.help
+
+Company.Executables.Options.Internal.Operations.helper1
+  :: forall a_a1zm.
+     ghc-prim-0.4.0.0:GHC.Prim.State#
+       ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+             ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+           a_a1zm -> a_a1zm #)
+[GblId,
+ Arity=1,
+ Caf=NoCafRefs,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=1,unsat_ok=True,boring_ok=True)}]
+Company.Executables.Options.Internal.Operations.helper1 =
+  \ (@ a_a1zm)
+    (s_i5ch [OS=OneShot]
+       :: ghc-prim-0.4.0.0:GHC.Prim.State#
+            ghc-prim-0.4.0.0:GHC.Prim.RealWorld) ->
+    (# s_i5ch, id @ a_a1zm #)
+
+helper :: forall a_a1pz. Parser (a_a1pz -> a_a1pz)
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 20 40}]
+helper =
+  \ (@ a_a1zm) ->
+    case O.helper @ a_a1zm of dt_X1GX { __DEFAULT ->
+    Company.Executables.Options.Internal.Types.Parser
+      @ (a_a1zm -> a_a1zm)
+      dt_X1GX
+      ((Company.Executables.Options.Internal.Operations.helper1 @ a_a1zm)
+       `cast` (Sym
+                 (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <a_a1zm -> a_a1zm>_R)
+               :: (ghc-prim-0.4.0.0:GHC.Prim.State#
+                     ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+                   -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                           ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                         a_a1zm -> a_a1zm #))
+                  ~R# IO (a_a1zm -> a_a1zm)))
+      (id @ a_a1zm)
+    }
+
+long
+  :: forall (f_a1ps :: * -> *) a_a1pt.
+     HasArgName f_a1ps =>
+     String -> ArgsMod f_a1ps a_a1pt
+[GblId,
+ Arity=2,
+ Caf=NoCafRefs,
+ Str=DmdType <L,1*C1(U)><L,U>m,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= O.long}]
+long = O.long
+
+lookupEnv :: String -> EnvParser (Maybe String)
+[GblId,
+ Arity=2,
+ Str=DmdType <L,U><L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= System.Environment.lookupEnv1
+               `cast` (<String>_R
+                       -> Sym (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <Maybe String>_R)
+                       :: (String
+                           -> ghc-prim-0.4.0.0:GHC.Prim.State#
+                                ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+                           -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                                   ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                                 Maybe String #))
+                          ~R# (String -> IO (Maybe String)))}]
+lookupEnv =
+  System.Environment.lookupEnv1
+  `cast` (<String>_R
+          -> Sym (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <Maybe String>_R)
+          :: (String
+              -> ghc-prim-0.4.0.0:GHC.Prim.State#
+                   ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+              -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                      ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                    Maybe String #))
+             ~R# (String -> IO (Maybe String)))
+
+metavar
+  :: forall (f_a1po :: * -> *) a_a1pp.
+     HasArgMetavar f_a1po =>
+     String -> ArgsMod f_a1po a_a1pp
+[GblId,
+ Arity=2,
+ Caf=NoCafRefs,
+ Str=DmdType <L,A><L,U>m,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= O.metavar}]
+metavar = O.metavar
+
+Company.Executables.Options.Internal.Operations.printHelp1
+  :: forall a_a1zy b_a1zz.
+     ParserInfo a_a1zy
+     -> ghc-prim-0.4.0.0:GHC.Prim.State#
+          ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+             ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+           b_a1zz #)
+[GblId,
+ Arity=2,
+ Str=DmdType <S(SSS),1*U(U(U,A,U,U,U,U(U),A),1*H,1*H)><L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (@ a_a1zy)
+                 (@ b_a1zz)
+                 (ds_d2Jc [Occ=Once!] :: ParserInfo a_a1zy)
+                 (eta_B1 [Occ=Once, OS=OneShot]
+                    :: ghc-prim-0.4.0.0:GHC.Prim.State#
+                         ghc-prim-0.4.0.0:GHC.Prim.RealWorld) ->
+                 case ds_d2Jc
+                 of _ [Occ=Dead]
+                 { ParserInfo ds1_d2Jd [Occ=Once] _ [Occ=Dead] _ [Occ=Dead] ->
+                 Options.Applicative.Extra.customExecParser2
+                   @ b_a1zz
+                   (Options.Applicative.Types.Failure
+                      @ b_a1zz
+                      (O.parserFailure
+                         @ a_a1zy
+                         parserPrefs
+                         ds1_d2Jd
+                         Options.Applicative.Types.ShowHelpText
+                         (ghc-prim-0.4.0.0:GHC.Types.[]
+                            @ Options.Applicative.Internal.Context)))
+                   eta_B1
+                 }}]
+Company.Executables.Options.Internal.Operations.printHelp1 =
+  \ (@ a_a1zy)
+    (@ b_a1zz)
+    (ds_d2Jc :: ParserInfo a_a1zy)
+    (eta_B1 [OS=OneShot]
+       :: ghc-prim-0.4.0.0:GHC.Prim.State#
+            ghc-prim-0.4.0.0:GHC.Prim.RealWorld) ->
+    case ds_d2Jc
+    of _ [Occ=Dead] { ParserInfo ds1_d2Jd ds2_d2Je ds3_d2Jf ->
+    Options.Applicative.Extra.customExecParser2
+      @ b_a1zz
+      (Options.Applicative.Types.Failure
+         @ b_a1zz
+         (O.parserFailure
+            @ a_a1zy
+            parserPrefs
+            ds1_d2Jd
+            Options.Applicative.Types.ShowHelpText
+            (ghc-prim-0.4.0.0:GHC.Types.[]
+               @ Options.Applicative.Internal.Context)))
+      eta_B1
+    }
+
+printHelp :: forall a_a1pA b_a1pB. ParserInfo a_a1pA -> IO b_a1pB
+[GblId,
+ Arity=2,
+ Str=DmdType <S(SSS),1*U(U(U,A,U,U,U,U(U),A),1*H,1*H)><L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= Company.Executables.Options.Internal.Operations.printHelp1
+               `cast` (forall a_a1zy b_a1zz.
+                       <ParserInfo a_a1zy>_R
+                       -> Sym (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <b_a1zz>_R)
+                       :: (forall a_a1zy b_a1zz.
+                           ParserInfo a_a1zy
+                           -> ghc-prim-0.4.0.0:GHC.Prim.State#
+                                ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+                           -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                                   ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                                 b_a1zz #))
+                          ~R# (forall a_a1zy b_a1zz. ParserInfo a_a1zy -> IO b_a1zz))}]
+printHelp =
+  Company.Executables.Options.Internal.Operations.printHelp1
+  `cast` (forall a_a1zy b_a1zz.
+          <ParserInfo a_a1zy>_R
+          -> Sym (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <b_a1zz>_R)
+          :: (forall a_a1zy b_a1zz.
+              ParserInfo a_a1zy
+              -> ghc-prim-0.4.0.0:GHC.Prim.State#
+                   ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+              -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                      ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                    b_a1zz #))
+             ~R# (forall a_a1zy b_a1zz. ParserInfo a_a1zy -> IO b_a1zz))
+
+Company.Executables.Options.Internal.Operations.fromParser2
+  :: [Char]
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=False, Guidance=IF_ARGS [] 70 0}]
+Company.Executables.Options.Internal.Operations.fromParser2 =
+  ghc-prim-0.4.0.0:GHC.CString.unpackCString# "Parser executed"#
+
+Company.Executables.Options.Internal.Operations.$wa1 [InlPrag=[0]]
+  :: forall a_a1Aa b_a1Ab.
+     Monoid a_a1Aa =>
+     (a_a1Aa -> Maybe b_a1Ab)
+     -> O.Parser a_a1Aa
+     -> Bool
+     -> Options.Applicative.Help.Chunk.Chunk
+          ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc
+     -> Options.Applicative.Help.Chunk.Chunk
+          ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc
+     -> Options.Applicative.Help.Chunk.Chunk
+          ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc
+     -> Int
+     -> Bool
+     -> EnvParser a_a1Aa
+     -> a_a1Aa
+     -> ghc-prim-0.4.0.0:GHC.Prim.State#
+          ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+             ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+           b_a1Ab #)
+[GblId,
+ Arity=12,
+ Str=DmdType <L,U(A,C(C1(U)),A)><L,1*C1(U)><L,U><L,U><L,U><L,U><L,U><L,U(U)><L,U><C(S),C1(U(U,U))><S,U><L,U>,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=IF_ARGS [60 60 0 0 0 0 0 0 0 0 0 0] 370 30}]
+Company.Executables.Options.Internal.Operations.$wa1 =
+  \ (@ a_a1Aa)
+    (@ b_a1Ab)
+    (w_s5K5 :: Monoid a_a1Aa)
+    (w1_s5K6 :: a_a1Aa -> Maybe b_a1Ab)
+    (ww_s5Ke :: O.Parser a_a1Aa)
+    (ww1_s5Kf :: Bool)
+    (ww2_s5Kg
+       :: Options.Applicative.Help.Chunk.Chunk
+            ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc)
+    (ww3_s5Kh
+       :: Options.Applicative.Help.Chunk.Chunk
+            ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc)
+    (ww4_s5Ki
+       :: Options.Applicative.Help.Chunk.Chunk
+            ansi-wl-pprint-0.6.7.3:Text.PrettyPrint.ANSI.Leijen.Doc)
+    (ww5_s5Kj :: Int)
+    (ww6_s5Kk :: Bool)
+    (ww7_s5Km :: EnvParser a_a1Aa)
+    (ww8_s5Kn :: a_a1Aa)
+    (w2_s5K8 [OS=OneShot]
+       :: ghc-prim-0.4.0.0:GHC.Prim.State#
+            ghc-prim-0.4.0.0:GHC.Prim.RealWorld) ->
+    case (ww7_s5Km
+          `cast` (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <a_a1Aa>_R
+                  :: IO a_a1Aa
+                     ~R# (ghc-prim-0.4.0.0:GHC.Prim.State#
+                            ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+                          -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                                  ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                                a_a1Aa #))))
+           w2_s5K8
+    of _ [Occ=Dead] { (# ipv_i39J, ipv1_i39K #) ->
+    case System.Environment.getArgs1 ipv_i39J
+    of _ [Occ=Dead] { (# ipv2_a39W, ipv3_a39X #) ->
+    case Options.Applicative.Extra.customExecParser2
+           @ a_a1Aa
+           (O.execParserPure
+              @ a_a1Aa
+              parserPrefs
+              (Options.Applicative.Types.ParserInfo
+                 @ a_a1Aa
+                 ww_s5Ke
+                 ww1_s5Kf
+                 ww2_s5Kg
+                 ww3_s5Kh
+                 ww4_s5Ki
+                 ww5_s5Kj
+                 ww6_s5Kk)
+              ipv3_a39X)
+           ipv2_a39W
+    of _ [Occ=Dead] { (# ipv4_X3aB, ipv5_X3aD #) ->
+    case GHC.IO.Handle.Text.hPutStr2
+           GHC.IO.Handle.FD.stdout
+           Company.Executables.Options.Internal.Operations.fromParser2
+           ghc-prim-0.4.0.0:GHC.Types.True
+           ipv4_X3aB
+    of _ [Occ=Dead] { (# ipv6_i5m9, ipv7_i5ma #) ->
+    case w1_s5K6
+           (mappend
+              @ a_a1Aa
+              w_s5K5
+              ww8_s5Kn
+              (mappend @ a_a1Aa w_s5K5 ipv1_i39K ipv5_X3aD))
+    of _ [Occ=Dead] {
+      Nothing ->
+        Options.Applicative.Extra.customExecParser2
+          @ b_a1Ab
+          (Options.Applicative.Types.Failure
+             @ b_a1Ab
+             (O.parserFailure
+                @ a_a1Aa
+                parserPrefs
+                (Options.Applicative.Types.ParserInfo
+                   @ a_a1Aa
+                   ww_s5Ke
+                   ww1_s5Kf
+                   ww2_s5Kg
+                   ww3_s5Kh
+                   ww4_s5Ki
+                   ww5_s5Kj
+                   ww6_s5Kk)
+                Options.Applicative.Types.ShowHelpText
+                (ghc-prim-0.4.0.0:GHC.Types.[]
+                   @ Options.Applicative.Internal.Context)))
+          ipv6_i5m9;
+      Just x_a2O6 -> (# ipv6_i5m9, x_a2O6 #)
+    }
+    }
+    }
+    }
+    }
+
+Company.Executables.Options.Internal.Operations.fromParser1 [InlPrag=INLINE[0]]
+  :: forall a_a1Aa b_a1Ab.
+     Monoid a_a1Aa =>
+     (a_a1Aa -> Maybe b_a1Ab)
+     -> ParserInfo a_a1Aa
+     -> ghc-prim-0.4.0.0:GHC.Prim.State#
+          ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+             ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+           b_a1Ab #)
+[GblId,
+ Arity=4,
+ Str=DmdType <L,U(A,C(C1(U)),A)><L,1*C1(U)><S(SC(S)S),U(U(U,U,U,U,U,U(U),U),C1(U(U,U)),U)><L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=4,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (@ a_a1Aa)
+                 (@ b_a1Ab)
+                 (w_s5K5 [Occ=Once] :: Monoid a_a1Aa)
+                 (w1_s5K6 [Occ=Once] :: a_a1Aa -> Maybe b_a1Ab)
+                 (w2_s5K7 [Occ=Once!] :: ParserInfo a_a1Aa)
+                 (w3_s5K8 [Occ=Once, OS=OneShot]
+                    :: ghc-prim-0.4.0.0:GHC.Prim.State#
+                         ghc-prim-0.4.0.0:GHC.Prim.RealWorld) ->
+                 case w2_s5K7
+                 of _ [Occ=Dead]
+                 { ParserInfo ww1_s5Kb [Occ=Once!] ww2_s5Km [Occ=Once]
+                              ww3_s5Kn [Occ=Once] ->
+                 case ww1_s5Kb
+                 of _ [Occ=Dead]
+                 { O.ParserInfo ww5_s5Ke [Occ=Once] ww6_s5Kf [Occ=Once]
+                                ww7_s5Kg [Occ=Once] ww8_s5Kh [Occ=Once] ww9_s5Ki [Occ=Once]
+                                ww10_s5Kj [Occ=Once] ww11_s5Kk [Occ=Once] ->
+                 Company.Executables.Options.Internal.Operations.$wa1
+                   @ a_a1Aa
+                   @ b_a1Ab
+                   w_s5K5
+                   w1_s5K6
+                   ww5_s5Ke
+                   ww6_s5Kf
+                   ww7_s5Kg
+                   ww8_s5Kh
+                   ww9_s5Ki
+                   ww10_s5Kj
+                   ww11_s5Kk
+                   ww2_s5Km
+                   ww3_s5Kn
+                   w3_s5K8
+                 }
+                 }}]
+Company.Executables.Options.Internal.Operations.fromParser1 =
+  \ (@ a_a1Aa)
+    (@ b_a1Ab)
+    (w_s5K5 :: Monoid a_a1Aa)
+    (w1_s5K6 :: a_a1Aa -> Maybe b_a1Ab)
+    (w2_s5K7 :: ParserInfo a_a1Aa)
+    (w3_s5K8 [OS=OneShot]
+       :: ghc-prim-0.4.0.0:GHC.Prim.State#
+            ghc-prim-0.4.0.0:GHC.Prim.RealWorld) ->
+    case w2_s5K7
+    of _ [Occ=Dead] { ParserInfo ww1_s5Kb ww2_s5Km ww3_s5Kn ->
+    case ww1_s5Kb
+    of _ [Occ=Dead]
+    { O.ParserInfo ww5_s5MI ww6_s5MJ ww7_s5MK ww8_s5ML ww9_s5MM
+                   ww10_s5MN ww11_s5MO ->
+    Company.Executables.Options.Internal.Operations.$wa1
+      @ a_a1Aa
+      @ b_a1Ab
+      w_s5K5
+      w1_s5K6
+      ww5_s5MI
+      ww6_s5MJ
+      ww7_s5MK
+      ww8_s5ML
+      ww9_s5MM
+      ww10_s5MN
+      ww11_s5MO
+      ww2_s5Km
+      ww3_s5Kn
+      w3_s5K8
+    }
+    }
+
+fromParser
+  :: forall a_a1pD b_a1pE.
+     Monoid a_a1pD =>
+     (a_a1pD -> Maybe b_a1pE) -> ParserInfo a_a1pD -> IO b_a1pE
+[GblId,
+ Arity=4,
+ Str=DmdType <L,U(A,C(C1(U)),A)><L,1*C1(U)><S(SC(S)S),U(U(U,U,U,U,U,U(U),U),C1(U(U,U)),U)><L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= Company.Executables.Options.Internal.Operations.fromParser1
+               `cast` (forall a_a1Aa b_a1Ab.
+                       <Monoid a_a1Aa>_R
+                       -> <a_a1Aa -> Maybe b_a1Ab>_R
+                       -> <ParserInfo a_a1Aa>_R
+                       -> Sym (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <b_a1Ab>_R)
+                       :: (forall a_a1Aa b_a1Ab.
+                           Monoid a_a1Aa =>
+                           (a_a1Aa -> Maybe b_a1Ab)
+                           -> ParserInfo a_a1Aa
+                           -> ghc-prim-0.4.0.0:GHC.Prim.State#
+                                ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+                           -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                                   ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                                 b_a1Ab #))
+                          ~R# (forall a_a1Aa b_a1Ab.
+                               Monoid a_a1Aa =>
+                               (a_a1Aa -> Maybe b_a1Ab) -> ParserInfo a_a1Aa -> IO b_a1Ab))}]
+fromParser =
+  Company.Executables.Options.Internal.Operations.fromParser1
+  `cast` (forall a_a1Aa b_a1Ab.
+          <Monoid a_a1Aa>_R
+          -> <a_a1Aa -> Maybe b_a1Ab>_R
+          -> <ParserInfo a_a1Aa>_R
+          -> Sym (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <b_a1Ab>_R)
+          :: (forall a_a1Aa b_a1Ab.
+              Monoid a_a1Aa =>
+              (a_a1Aa -> Maybe b_a1Ab)
+              -> ParserInfo a_a1Aa
+              -> ghc-prim-0.4.0.0:GHC.Prim.State#
+                   ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+              -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                      ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                    b_a1Ab #))
+             ~R# (forall a_a1Aa b_a1Ab.
+                  Monoid a_a1Aa =>
+                  (a_a1Aa -> Maybe b_a1Ab) -> ParserInfo a_a1Aa -> IO b_a1Ab))
+
+progDesc :: forall a_a1px. String -> ArgsInfoMod a_a1px
+[GblId,
+ Arity=1,
+ Str=DmdType <L,1*U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= O.progDesc}]
+progDesc = O.progDesc
+
+readMaybe :: forall a_a1dC. Read a_a1dC => String -> Maybe a_a1dC
+[GblId,
+ Arity=2,
+ Caf=NoCafRefs,
+ Str=DmdType <S(C(C(S))LLL),1*U(1*C1(C1(U)),A,A,A)><L,U>,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [30 0] 120 50}]
+readMaybe =
+  \ (@ a_a1vV) ($dRead_a1Ac :: Read a_a1vV) (s_a1uT :: String) ->
+    case readsPrec
+           @ a_a1vV $dRead_a1Ac Text.ParserCombinators.ReadPrec.minPrec s_a1uT
+    of _ [Occ=Dead] {
+      [] -> GHC.Base.Nothing @ a_a1vV;
+      : ds_d2J5 ds1_d2J6 ->
+        case ds_d2J5 of _ [Occ=Dead] { (x_a1vr, ds2_d2J7) ->
+        case ds2_d2J7 of _ [Occ=Dead] {
+          [] ->
+            case ds1_d2J6 of _ [Occ=Dead] {
+              [] -> GHC.Base.Just @ a_a1vV x_a1vr;
+              : ipv_s30u ipv1_s30v -> GHC.Base.Nothing @ a_a1vV
+            };
+          : ipv_s30s ipv1_s30x -> GHC.Base.Nothing @ a_a1vV
+        }
+        }
+    }
+
+Company.Executables.Options.Internal.Operations.readEnv1
+  :: forall a_a1we.
+     Read a_a1we =>
+     String
+     -> ghc-prim-0.4.0.0:GHC.Prim.State#
+          ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+             ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+           Maybe a_a1we #)
+[GblId,
+ Arity=3,
+ Str=DmdType <L,1*U(1*C1(C1(U)),A,A,A)><L,U><L,U>,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [0 0 0] 120 30}]
+Company.Executables.Options.Internal.Operations.readEnv1 =
+  \ (@ a_a1we)
+    ($dRead_a1EN :: Read a_a1we)
+    (eta_B1 :: String)
+    (s_i5mn [OS=OneShot]
+       :: ghc-prim-0.4.0.0:GHC.Prim.State#
+            ghc-prim-0.4.0.0:GHC.Prim.RealWorld) ->
+    case GHC.IO.Encoding.getForeignEncoding1
+    of _ [Occ=Dead]
+    { (getForeignEncoding5_a5cB, setForeignEncoding1_a5cC) ->
+    case (getForeignEncoding5_a5cB
+          `cast` (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0]
+                    <GHC.IO.Encoding.Types.TextEncoding>_R
+                  :: IO GHC.IO.Encoding.Types.TextEncoding
+                     ~R# (ghc-prim-0.4.0.0:GHC.Prim.State#
+                            ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+                          -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                                  ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                                GHC.IO.Encoding.Types.TextEncoding #))))
+           s_i5mn
+    of _ [Occ=Dead] { (# ipv_a5cJ, ipv1_a5cK #) ->
+    case GHC.Foreign.charIsRepresentable3
+           @ (Maybe String)
+           ipv1_a5cK
+           eta_B1
+           (System.Environment.getEnv4
+            `cast` (<Foreign.C.String.CString>_R
+                    -> Sym (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <Maybe String>_R)
+                    :: (Foreign.C.String.CString
+                        -> ghc-prim-0.4.0.0:GHC.Prim.State#
+                             ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+                        -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                                ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                              Maybe String #))
+                       ~R# (Foreign.C.String.CString -> IO (Maybe String))))
+           ipv_a5cJ
+    of _ [Occ=Dead] { (# ipv2_i5mq, ipv3_i5mr #) ->
+    (# ipv2_i5mq,
+       case ipv3_i5mr of _ [Occ=Dead] {
+         Nothing -> GHC.Base.Nothing @ a_a1we;
+         Just x_i30U -> readMaybe @ a_a1we $dRead_a1EN x_i30U
+       } #)
+    }
+    }
+    }
+
+readEnv
+  :: forall a_a1pl. Read a_a1pl => String -> EnvParser (Maybe a_a1pl)
+[GblId,
+ Arity=3,
+ Str=DmdType <L,1*U(1*C1(C1(U)),A,A,A)><L,U><L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= Company.Executables.Options.Internal.Operations.readEnv1
+               `cast` (forall a_a1we.
+                       <Read a_a1we>_R
+                       -> <String>_R
+                       -> Sym (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <Maybe a_a1we>_R)
+                       :: (forall a_a1we.
+                           Read a_a1we =>
+                           String
+                           -> ghc-prim-0.4.0.0:GHC.Prim.State#
+                                ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+                           -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                                   ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                                 Maybe a_a1we #))
+                          ~R# (forall a_a1we. Read a_a1we => String -> IO (Maybe a_a1we)))}]
+readEnv =
+  Company.Executables.Options.Internal.Operations.readEnv1
+  `cast` (forall a_a1we.
+          <Read a_a1we>_R
+          -> <String>_R
+          -> Sym (ghc-prim-0.4.0.0:GHC.Types.NTCo:IO[0] <Maybe a_a1we>_R)
+          :: (forall a_a1we.
+              Read a_a1we =>
+              String
+              -> ghc-prim-0.4.0.0:GHC.Prim.State#
+                   ghc-prim-0.4.0.0:GHC.Prim.RealWorld
+              -> (# ghc-prim-0.4.0.0:GHC.Prim.State#
+                      ghc-prim-0.4.0.0:GHC.Prim.RealWorld,
+                    Maybe a_a1we #))
+             ~R# (forall a_a1we. Read a_a1we => String -> IO (Maybe a_a1we)))
+
+short
+  :: forall (f_a1pq :: * -> *) a_a1pr.
+     HasArgName f_a1pq =>
+     Char -> ArgsMod f_a1pq a_a1pr
+[GblId,
+ Arity=2,
+ Caf=NoCafRefs,
+ Str=DmdType <L,1*C1(U)><L,U>m,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= O.short}]
+short = O.short
+
+strArgument :: ArgsMod ArgFields String -> ArgsParser String
+[GblId,
+ Arity=1,
+ Caf=NoCafRefs,
+ Str=DmdType,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= O.strArgument}]
+strArgument = O.strArgument
+
+strOption :: ArgsMod OptionFields String -> ArgsParser String
+[GblId,
+ Arity=1,
+ Str=DmdType,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= O.strOption}]
+strOption = O.strOption
+
+value
+  :: forall a_a1pm (f_a1pn :: * -> *).
+     HasArgValue f_a1pn =>
+     a_a1pm -> ArgsMod f_a1pn a_a1pm
+[GblId,
+ Arity=2,
+ Caf=NoCafRefs,
+ Str=DmdType <L,A><L,U>m,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= O.value}]
+value = O.value
+
+Company.Executables.Options.Internal.Operations.intOption1
+  :: String
+     -> transformers-0.4.2.0:Control.Monad.Trans.Except.Except
+          O.ParseError Int
+[GblId,
+ Arity=1,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 20 60}]
+Company.Executables.Options.Internal.Operations.intOption1 =
+  Options.Applicative.Builder.auto1 @ Int GHC.Read.$fReadInt
+
+intOption [InlPrag=INLINE[0]]
+  :: ArgsMod OptionFields Int -> ArgsParser Int
+[GblId,
+ Arity=1,
+ Str=DmdType <S(LSL),1*U(1*C1(U(U,U,U)),1*U(U,1*U),1*C1(U(U,U,U,A)))>m4,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=1,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (w_s5Kv [Occ=Once!] :: ArgsMod OptionFields Int) ->
+                 case w_s5Kv
+                 of _ [Occ=Dead]
+                 { Options.Applicative.Builder.Internal.Mod ww1_s5Ky [Occ=Once]
+                                                            ww2_s5Kz [Occ=Once!]
+                                                            ww3_s5KF [Occ=Once] ->
+                 case ww2_s5Kz
+                 of _ [Occ=Dead]
+                 { Options.Applicative.Builder.Internal.DefaultProp ww5_s5KC [Occ=Once]
+                                                                    ww6_s5KD [Occ=Once] ->
+                 case Options.Applicative.Builder.$woption
+                        @ Int
+                        (Company.Executables.Options.Internal.Operations.intOption1
+                         `cast` (Sym
+                                   (transformers-0.4.2.0:Control.Monad.Trans.Reader.NTCo:ReaderT[0]
+                                      <String>_R
+                                      <transformers-0.4.2.0:Control.Monad.Trans.Except.Except
+                                         O.ParseError>_R
+                                      <Int>_N)
+                                 ; Sym Options.Applicative.Types.NTCo:ReadM[0] <Int>_N
+                                 :: (String
+                                     -> transformers-0.4.2.0:Control.Monad.Trans.Except.Except
+                                          O.ParseError Int)
+                                    ~R# O.ReadM Int))
+                        ww1_s5Ky
+                        ww5_s5KC
+                        ww6_s5KD
+                        ww3_s5KF
+                 of _ [Occ=Dead] { (# ww8_s5KL [Occ=Once], ww9_s5KM [Occ=Once] #) ->
+                 Options.Applicative.Types.AltP @ Int ww8_s5KL ww9_s5KM
+                 }
+                 }
+                 }}]
+intOption =
+  \ (w_s5Kv :: ArgsMod OptionFields Int) ->
+    case w_s5Kv
+    of _ [Occ=Dead]
+    { Options.Applicative.Builder.Internal.Mod ww1_s5Ky ww2_s5Kz
+                                               ww3_s5KF ->
+    case ww2_s5Kz
+    of _ [Occ=Dead]
+    { Options.Applicative.Builder.Internal.DefaultProp ww5_s5KC
+                                                       ww6_s5KD ->
+    case Options.Applicative.Builder.$woption
+           @ Int
+           (Company.Executables.Options.Internal.Operations.intOption1
+            `cast` (Sym
+                      (transformers-0.4.2.0:Control.Monad.Trans.Reader.NTCo:ReaderT[0]
+                         <String>_R
+                         <transformers-0.4.2.0:Control.Monad.Trans.Except.Except
+                            O.ParseError>_R
+                         <Int>_N)
+                    ; Sym Options.Applicative.Types.NTCo:ReadM[0] <Int>_N
+                    :: (String
+                        -> transformers-0.4.2.0:Control.Monad.Trans.Except.Except
+                             O.ParseError Int)
+                       ~R# O.ReadM Int))
+           ww1_s5Ky
+           ww5_s5KC
+           ww6_s5KD
+           ww3_s5KF
+    of _ [Occ=Dead] { (# ww8_s5KL, ww9_s5KM #) ->
+    Options.Applicative.Types.AltP @ Int ww8_s5KL ww9_s5KM
+    }
+    }
+    }
+
+
